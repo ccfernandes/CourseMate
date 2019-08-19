@@ -24,4 +24,5 @@ urlpatterns = [
     path('time/', views.current_date_time, name="time"),
     path('login/', views.login, name="login"),
     path('about/', views.about, name="about"),
+    path('review/', views.review, name="review"),
 ]

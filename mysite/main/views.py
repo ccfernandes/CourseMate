@@ -1,12 +1,9 @@
 from django.shortcuts import render #render is for templates
 from django.http import HttpResponse 
 from .models import Tutorial
+from .models import School 
 
 import datetime
-
-#just regular python functions with user requests 
-	#login/logout 
-	#play video?
 
 # Create your views here.
 def homepage(request): #for any view, always pass request 
@@ -18,6 +15,10 @@ def homepage(request): #for any view, always pass request
 def about(request):
 	return render(request=request, #so u can reference things inside your template to do with the user
                     template_name="main/AboutUs.html")
+
+def review(request):
+	return render(request=request, #so u can reference things inside your template to do with the user
+                    template_name="main/review.html")
 
 def login(request):
 	now=datetime.datetime.now()
