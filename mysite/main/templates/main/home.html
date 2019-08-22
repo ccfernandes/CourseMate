@@ -173,6 +173,14 @@ footer {
   }
 }
 
+/*.schools {
+  color:  white;
+}*/
+
+a {
+  color: white;
+}
+
 @media (max-width: 500px) {
   .top-container {
     grid-template-areas:
@@ -195,10 +203,25 @@ footer {
       <header class="showcase">
         <h1>CourseMate :)</h1>
         <p>Your one-stop shop for course peer reviews!</p>
-        <p>Search for your University: 
-        <form action="/action_page.php">
+        <p>Select your University from the List below: 
+        <!-- <form action="/action_page.php">
       <input id="search" type="text" placeholder="Search..." name="search">
-      <button type="submit"><i class="btn">Search</i></button></form></p>
+      <button type="submit"><i class="btn">Search</i></button></form> -->
+
+      <!-- <form action="/search">
+        <input type="text" name="textfield">
+
+        <button type="submit">Find your course</button>
+      </form> -->
+ 
+      <ul class="schools">
+        {% for school_list in school_list %}
+          <!-- <li class="school">{{ school_list.name }}</li> -->
+          <a href="search/{{ school_list.abbrev }}"><li class="school">{{ school_list.name }}</li>
+          </a>
+        {% endfor %}
+      </ul>
+    </p>
     
       </header>
       <!-- <div class="top-box top-box-a">
@@ -224,19 +247,19 @@ footer {
     <!-- Boxes Section -->
     <section class="boxes">
       <div class="box">
-        <i class="fas fa-chart-pie fa-4x"></i>
+        <!-- <i class="fas fa-chart-pie fa-4x"></i> -->
         <h3>Course Analytics</h3>
         <img src="https://cdn4.iconfinder.com/data/icons/data-charts-and-graphs/100/Histogram-512.png" alt="">
         <p>Each course comes with a compiled analysis of reviews for quick facts!</p>
       </div>
       <div class="box">
-        <i class="fas fa-globe fa-4x"></i>
+        <!-- <i class="fas fa-globe fa-4x"></i> -->
         <h3>Peer Reviews</h3>
         <img src="https://image.flaticon.com/icons/png/512/33/33308.png" alt="">
-        <p>Get the details of the class from students who have actually it. </p>
+        <p>Get the details of the class from students who have actually taken it. </p>
       </div>
       <div class="box">
-        <i class="fas fa-cog fa-4x"></i>
+        <!-- <i class="fas fa-cog fa-4x"></i> -->
         <h3>Course Resources</h3>
         <img src="http://cdn.onlinewebfonts.com/svg/img_85957.png" alt="">
         <p>Find resources from the professors and students to help you decide if that course is right for you.</p>
