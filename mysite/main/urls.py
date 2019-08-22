@@ -25,4 +25,11 @@ urlpatterns = [
     path('login/', views.login, name="login"),
     path('about/', views.about, name="about"),
     path('review/', views.review, name="review"),
+    path('search/', views.search, name="search"),
+    path('search/SCU/', views.SCU, name="SCU"),
+    path('search/SCU/addcourse/', views.addCourse, name="addcourse"),
+    path('course/', views.course, name="course")
+
+    # path('forms/', views.CourseView, name="forms"),
+    # path('review_form_submission/', views.review_form_submission, name="review_form_submission"),
 ]
